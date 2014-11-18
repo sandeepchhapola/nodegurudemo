@@ -1,3 +1,5 @@
-/**
- * Created by sandeepchhapola on 14/11/14.
- */
+exports.scheme={
+    username:String,
+    password:String,
+    salt:String
+};

@@ -1,3 +1,6 @@
-/**
- * Created by sandeepchhapola on 14/11/14.
- */
+angular.module('nodeGuru')
+    .service("userService",function(){
+        this.getUser=function(){
+            console.log("user service run successfully");
+        }
+    });

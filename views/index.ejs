@@ -1,0 +1,31 @@
+<html ng-app="nodeGuru">
+<title>
+    node-guru-demo
+</title>
+<head>
+    <script type="text/javascript" src="../client/bower/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../client/bower/angular/angular.js"></script>
+    <script type="text/javascript" src="../client/bower/angular-route/angular-route.js"></script>
+    <link rel="stylesheet" href="../client/bower/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../client/css/nodeguru.css">
+    <script type="text/javascript" src="../client/app/app.js"></script>
+    <script type="text/javascript" src="../client/app/services/userService.js"></script>
+    <script type="text/javascript" src="../client/app/controllers/mainController.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">nodegurudemo</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#/welcome">Welcome</a></li>
+            <li><a href="#/about">Aboutus</a></li>
+        </ul>
+    </div>
+</nav>
+<div ng-view=""></div>
+</body>
+</html>
