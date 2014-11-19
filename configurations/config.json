@@ -1,0 +1,24 @@
+{
+    "common": {
+        "port": 8080,
+        "appName": "nodegurudemo",
+        "dataSource": {
+            "mongo": {
+                "url": "mongodb://localhost:27017/nodegurudemo",
+                "poolSize": "100"
+            }
+        },
+        "superUser":{
+            "userName": "sandeepkumar",
+            "password": "123456789",
+            "salt": "evDAADgadgasd54/gd2@#25"
+        },
+        "development": {
+            "port": 9600,
+            "showHidden": true,
+            "serverUrl": "http://localhost:9600"
+        }
+    }
+}
+
+

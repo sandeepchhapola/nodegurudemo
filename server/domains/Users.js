@@ -1,3 +1,5 @@
-/**
- * Created by sandeepchhapola on 14/11/14.
- */
+module.exports={
+    "userName":{type:String},
+    "password":{type:String},
+    "salt":{type:String}
+};
