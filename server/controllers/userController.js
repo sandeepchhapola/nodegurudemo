@@ -1,3 +1,3 @@
-/**
- * Created by sandeepchhapola on 14/11/14.
- */
+module.exports.getUserList=function(req,res){
+    _Services.userService.getUserList(req,res);
+};

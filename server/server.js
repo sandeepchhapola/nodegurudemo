@@ -1,5 +1,14 @@
-/**
- * Created by sandeepchhapola on 14/11/14.
- */
-var setup=require('../stuff/tasks/serverSetup');
-setup.initServerSetup();
+var serverSetup = require('../stuff/tasks/serverSetup');
+
+serverSetup.initServerSetup();
+
+var _server=_http.createServer(_app)
+    .on("error", function (err) {
+        console.log(err);
+    });
+_server.listen(3000, function () {
+        console.log('Server listening on port',_server.address().port);
+    })
+    .on("error", function (err) {
+        console.log(err);
+    });

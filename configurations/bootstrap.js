@@ -22,15 +22,23 @@ module.exports.initDomains = function () {
 
 module.exports.initSuperUser = function () {
     console.log("Save SuperUser to db");
-    new Users({
-        "userName": _config.common.superUser.userName,
-        "password": _config.common.superUser.password,
-        "salt": _config.common.superUser.salt
-    }).save(function (err, result) {
-            if (err) {
-                console.log("User Not Saved Sucessfully");
-            } else {
-                console.log("User Saved Sucessfully", result);
-            }
-        });
+    Users.findOne({"userName": _config.common.superUser.userName},function(err,user){
+        if (err) {
+            console.log("Error in finding super user");
+        }else if(user) {
+            console.log("Super User Already Exists");
+        }else if(!user) {
+            new Users({
+                "userName": _config.common.superUser.userName,
+                "password": _config.common.superUser.password,
+                "salt": _config.common.superUser.salt
+            }).save(function (err, result) {
+                    if (err) {
+                        console.log("User Not Saved Sucessfully");
+                    } else {
+                        console.log("User Saved Sucessfully", result);
+                    }
+                });
+        }
+    });
 };
