@@ -1,17 +1,21 @@
 module.exports.initGlobals = function () {
 
-    var config = require('../configurations/config.json');
-    var mongoose = require('mongoose');
-    var fs = require('fs');
-    var path = require('path');
-    var express = require('express');
-    var http = require('http');
-    var app=express();
-    var Services = {};
-    var Controllers = {};
+    var config = require('../configurations/config.json'),
+        mongoose = require('mongoose'),
+        fs = require('fs'),
+        path = require('path'),
+        express = require('express'),
+        http = require('http'),
+        app = express(),
+        Services = {},
+        Controllers = {};
 
     global.__defineGetter__("_config", function () {
         return config;
+    });
+
+    global.__defineGetter__("_express", function () {
+        return express;
     });
 
     global.__defineGetter__("_app", function () {
