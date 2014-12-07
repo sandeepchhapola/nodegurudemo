@@ -1,6 +1,6 @@
-angular.module('nodeGuru', [
-        'ngRoute'
-    ])
+angular.module('nodeguru', [
+    'ngRoute'
+])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {

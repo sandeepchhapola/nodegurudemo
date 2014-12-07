@@ -1,10 +1,10 @@
 {
     "common": {
         "port": 8080,
-        "appName": "nodegurudemo",
+        "appName": "nodeguru",
         "dataSource": {
             "mongo": {
-                "url": "mongodb://localhost:27017/nodegurudemo",
+                "url": "mongodb://localhost:27017/nodeguru",
                 "poolSize": "100"
             }
         },
@@ -20,5 +20,3 @@
         }
     }
 }
-
-

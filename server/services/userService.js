@@ -3,6 +3,6 @@ module.exports.getUserList=function(req,res){
         if(err){
             res.status(400).send(err).end();
         }
-            res.status(200).send(users).end();
+        res.status(200).send(users).end();
     });
 };
